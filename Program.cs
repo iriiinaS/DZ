@@ -1,21 +1,19 @@
-﻿ /* Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
-2, 3, 7 -> 7
-44 5 78 -> 78
-22 3 9 -> 22      */
+﻿ /* Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+4 -> да
+-3 -> нет
+7 -> нет      */
 
 
-int a, b, c;
+int a;
 Console.WriteLine($"Введите первое число: " );
 int.TryParse (Console.ReadLine ()!, out a); 
-Console.Write ($"Введите второе число: " );
-int.TryParse (Console.ReadLine(), out b);
-Console.Write ($"Введите третье число: " );
-int.TryParse (Console.ReadLine(), out c);
 
-int max = a;
-if (b > max)
-max = b;
-if (c > max)
-max = c ; 
 
-Console.Write($"{max}");
+if (a % 2 == 0)
+{
+    Console.Write($"Да");
+}
+else
+{
+    Console.Write($"Нет");
+}
